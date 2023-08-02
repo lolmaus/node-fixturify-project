@@ -851,13 +851,13 @@ describe('Project', async () => {
     const { execFileSync } = require('child_process');
 
     expect(
-      execFileSync('yarn', ['-s', 'run', 'hello'], {
+      execFileSync('pnpm', ['-s', 'run', 'hello'], {
         cwd: project.baseDir,
         encoding: 'utf8',
       })
     ).to.eql('hello\n');
 
-    const binPath = execFileSync('yarn', ['bin'], {
+    const binPath = execFileSync('pnpm', ['bin'], {
       cwd: project.baseDir,
       encoding: 'utf8',
     }).trimEnd();

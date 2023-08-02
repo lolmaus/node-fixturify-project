@@ -21,9 +21,9 @@
   "scripts": {
     "build": "tsup-node src/index.ts --format cjs,esm --external 'fs-extra' --dts --clean",
     "docs:generate": "readme-api-generator src/index.ts --ts",
-    "lint": "yarn prettier --check *.ts",
-    "prepare": "yarn build",
-    "prepublishOnly": "yarn build",
+    "lint": "pnpm prettier --check *.ts",
+    "prepare": "pnpm build",
+    "prepublishOnly": "pnpm build",
     "test": "vitest run"
   },
   "dependencies": {
@@ -72,7 +72,6 @@
     }
   },
   "volta": {
-    "node": "18.17.0",
-    "yarn": "1.22.4"
+    "node": "18.17.0"
   }
 }
